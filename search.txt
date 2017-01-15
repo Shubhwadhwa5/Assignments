@@ -1,0 +1,39 @@
+
+package practise;
+
+//package demoprac;
+
+import java.util.Scanner;
+
+public class Data {
+	
+	Scanner sc=new Scanner(System.in);
+String []name;
+int i,n;
+	String s;
+	void search()
+	{
+            	System.out.println("Enter the size of an array");
+                n=sc.nextInt();
+		System.out.println("Enter the name");
+		name=new String[n];
+		for(i=0;i<n;i++)
+		{
+		name[i]=sc.next();
+		}
+		System.out.println("Enter the name u want to search");
+                s=sc.next();
+      for(i=0;i<n;i++)
+		{
+      if(name[i].equals(s))
+	{
+		System.out.println(s+" is found at location: "+(i+1));
+
+                }
+    }}
+	public static void main(String args[])
+	{
+	Data d=new Data();
+	d.search();
+	}
+}

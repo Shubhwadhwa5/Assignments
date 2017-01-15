@@ -1,0 +1,59 @@
+
+package practise;
+
+//package demoprac;
+import java.util.Scanner;
+public class pyramid
+{
+
+public static void main(String args[])
+
+{
+	int rc=1;
+	Scanner sc = new Scanner(System.in);
+
+System.out.println("How Many Rows You Want In Your Pyramid?");
+int nr = sc.nextInt();
+System.out.println("Here is\n");
+for (int i = nr; i > 0; i--)
+{
+
+
+	for (int j = 1; j <= i; j++)
+	{
+		System.out.print(" ");
+	}
+
+
+	for (int j = 1; j <= rc; j++)
+	{
+		System.out.print("*"+" ");
+	}
+
+	System.out.println(" ");
+	rc++;
+    }
+for (int i = nr; i > 0; i--)
+{
+
+	for (int j = nr; j >= i; j--)
+	{
+		System.out.print(" ");
+	}
+
+
+	for (int j = 1; j <=i; j++)
+	{
+		System.out.print("*"+" ");
+	}
+
+	System.out.println(" ");
+	rc++;
+    }
+
+}
+
+        }
+    
+
+

@@ -1,0 +1,60 @@
+Ques: Enter multiple data into the files.
+
+package prac;
+import java.util.Date;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.Scanner; 
+public class filehan  {
+	  	public static void main(String args[]) 
+   	 {    
+	        Date date = new Date();
+	        Scanner sc=new Scanner(System.in);
+	       	System.out.println("Enter the path");
+	       	String path=sc.nextLine();
+	        int n,i;
+	        System.out.println("Enter the value of N");
+	      	 n=sc.nextInt();
+	      	int roll[]=new int[n];
+	        
+	      	 String str[]=new String[n];
+	        FileWriter fw;
+   	 BufferedWriter bw; 
+   	PrintWriter pw; 
+   	try { 
+ 
+   	fw = new FileWriter(path,true); 
+   	bw = new BufferedWriter(fw); 
+   	pw = new PrintWriter(bw);
+   	pw.println("\n");
+  	for(i=0;i<n;i++)
+	   	{
+  		
+		System.out.println("Enter the Roll Number and Name: ");
+	   	
+	 roll[i]=sc.nextInt();
+	   	
+		str[i]=sc.nextLine();
+  		}
+  	pw.println("Roll Number"+" \t "+ " Name: ");
+   	
+  	for(i=0;i<n;i++)
+   	{
+	
+  		pw.println( roll[i]+" \t       "+str[i]);
+   	}  	 
+	   	
+   	System.out.println(date.toString());
+pw.println(date.toString());
+   	System.out.println("Data Successfully Appended.........."); 
+   	pw.flush();
+   
+   	}
+   	 catch (Exception e){
+   		 System.out.println("Error occured....");
+   	 }
+   	
+
+   	 }
+   	}

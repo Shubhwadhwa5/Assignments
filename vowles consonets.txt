@@ -1,0 +1,79 @@
+Ques: Count number of vowles ,characters       ,words and consonents ? 
+
+package practise;
+
+import java.util.Scanner;
+
+public class practical1
+{      boolean quit=false;
+
+
+        Scanner sc = new Scanner(System.in);
+        
+    int choice;
+    void str()
+    {
+
+   String st = "";
+        int i, l, v, c, sp;
+        char a;
+        v =0; c =0; sp = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a String: ");
+        st = sc.nextLine();
+        l = st.length();
+        for (i = 0; i < l; i++) {
+            a = st.charAt(i);
+            if (a == 'a' || a == 'A' || a == 'e' || a == 'E' || a == 'i' || a == 'I'
+                    || a == 'o' || a == 'O' || a == 'u' || a == 'U' ) {
+                v++;
+            }
+            if (a == ' ') {
+                sp++;
+            }
+
+        }
+        c = l - (v + sp);
+        int cha=v+c;
+        System.out.println("Total Vowels = " + v);
+        System.out.println("Total Space = " + sp);
+        System.out.println("Total Consonants = " + c);
+        System.out.println("Total Words= " + (sp + 1));
+        System.out.println("Total characters="+cha);
+    }
+void again()
+    {str();
+    do{
+
+    System.out.println("\n");
+
+    System.out.println("Do u want to perform again");
+    System.out.println("Press 1 for Yes");
+    System.out.println("Press 0 for No");
+    choice=sc.nextInt();
+if(choice==1)
+{
+str();
+	}
+ else if(choice==0)
+{
+     break;
+
+ }
+ else{
+    System.out.println("Wrong choice");
+str();
+ }
+
+
+ }while(!quit);
+		}
+
+
+public static void main(String args[])
+    { 
+    
+practical1 p=new practical1();
+p.again();
+}
+}

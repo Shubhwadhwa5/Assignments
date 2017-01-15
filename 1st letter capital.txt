@@ -1,0 +1,531 @@
+Ques How to make 1st letter capital in the string?
+
+package practise;
+
+//package prac;
+import java.util.Scanner;
+//import java.lang.String;
+public class stt
+{
+	
+	int n;
+	boolean quit=false;
+Scanner sc=new Scanner(System.in);
+void abc()
+{
+    do{
+	String str1;
+	  String source;
+
+       
+        System.out.println("Enter the size of N"+"            "+"(Maximum Limit is 10)");
+        n=sc.nextInt();
+
+        System.out.println("Enter your String");
+    if(n==1)
+    {
+
+        String n1= sc.next();
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+       
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+       
+        System.out.println("Result::"+capitalized);
+
+
+    }
+ else if(n==2)
+    {
+
+        String n1= sc.next();
+        String n2 = sc.next();
+        //String n3 = sc.next();
+
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        //String thirdLetter = n3.substring(0,1);
+      //  String remainder2   = n3.substring(1);
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        //String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        System.out.println("Result::"+capitalized+" "+capitalized1);
+
+
+ }
+    else if(n == 3)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2);
+
+
+       }
+
+    else if(n == 4)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+        String n4 = sc.next();
+
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String fourthLetter = n4.substring(0,1);
+        String remainder3   = n4.substring(1);
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        String capitalized3 = fourthLetter.toUpperCase() + remainder3.toLowerCase();
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2+" "+capitalized3);
+
+
+       }
+
+    else if(n == 5)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+
+        String n4 = sc.next();
+
+        String n5 = sc.next();
+
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String fourthLetter = n4.substring(0,1);
+        String remainder3   = n4.substring(1);
+
+        String fifthLetter = n5.substring(0,1);
+        String remainder4   = n5.substring(1);
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        String capitalized3 = fourthLetter.toUpperCase() + remainder3.toLowerCase();
+
+
+        String capitalized4 = fifthLetter.toUpperCase() + remainder4.toLowerCase();
+
+
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2+" "+capitalized3+" "+capitalized4);
+
+
+       }
+    else if(n == 6)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+
+        String n4 = sc.next();
+
+        String n5 = sc.next();
+
+        String n6 = sc.next();
+
+
+       
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String fourthLetter = n4.substring(0,1);
+        String remainder3   = n4.substring(1);
+
+        String fifthLetter = n5.substring(0,1);
+        String remainder4   = n5.substring(1);
+
+
+        String sixthLetter = n6.substring(0,1);
+        String remainder5   = n6.substring(1);
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        String capitalized3 = fourthLetter.toUpperCase() + remainder3.toLowerCase();
+
+
+        String capitalized4 = fifthLetter.toUpperCase() + remainder4.toLowerCase();
+
+        String capitalized5 = sixthLetter.toUpperCase() + remainder5.toLowerCase();
+
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2+" "+capitalized3+" "+capitalized4+" "+capitalized5);
+
+
+       }
+    else if(n == 7)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+
+        String n4 = sc.next();
+
+        String n5 = sc.next();
+
+        String n6 = sc.next();
+
+        String n7 = sc.next();
+
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String fourthLetter = n4.substring(0,1);
+        String remainder3   = n4.substring(1);
+
+        String fifthLetter = n5.substring(0,1);
+        String remainder4   = n5.substring(1);
+
+
+        String sixthLetter = n6.substring(0,1);
+        String remainder5   = n6.substring(1);
+
+
+        String seventhLetter = n7.substring(0,1);
+        String remainder6   = n7.substring(1);
+
+
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        String capitalized3 = fourthLetter.toUpperCase() + remainder3.toLowerCase();
+
+
+        String capitalized4 = fifthLetter.toUpperCase() + remainder4.toLowerCase();
+
+        String capitalized5 = sixthLetter.toUpperCase() + remainder5.toLowerCase();
+
+
+        String capitalized6 = seventhLetter.toUpperCase() + remainder6.toLowerCase();
+
+
+
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2+" "+capitalized3+" "+capitalized4+" "+capitalized5+" "+capitalized6);
+
+
+       }
+    else if(n == 8)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+
+        String n4 = sc.next();
+
+        String n5 = sc.next();
+
+        String n6 = sc.next();
+
+        String n7 = sc.next();
+
+        String n8 = sc.next();
+
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String fourthLetter = n4.substring(0,1);
+        String remainder3   = n4.substring(1);
+
+        String fifthLetter = n5.substring(0,1);
+        String remainder4   = n5.substring(1);
+
+
+        String sixthLetter = n6.substring(0,1);
+        String remainder5   = n6.substring(1);
+
+
+        String seventhLetter = n7.substring(0,1);
+        String remainder6   = n7.substring(1);
+
+
+        String eigthLetter = n8.substring(0,1);
+        String remainder7   = n8.substring(1);
+
+
+
+
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        String capitalized3 = fourthLetter.toUpperCase() + remainder3.toLowerCase();
+
+
+        String capitalized4 = fifthLetter.toUpperCase() + remainder4.toLowerCase();
+
+        String capitalized5 = sixthLetter.toUpperCase() + remainder5.toLowerCase();
+
+
+        String capitalized6 = seventhLetter.toUpperCase() + remainder6.toLowerCase();
+
+
+        String capitalized7 = eigthLetter.toUpperCase() + remainder7.toLowerCase();
+
+
+
+
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2+" "+capitalized3+" "+capitalized4+" "+capitalized5+" "+capitalized6+" "+capitalized7);
+
+
+       }
+    else if(n == 9)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+
+        String n4 = sc.next();
+
+        String n5 = sc.next();
+
+        String n6 = sc.next();
+
+        String n7 = sc.next();
+
+        String n8 = sc.next();
+
+        String n9 = sc.next();
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String fourthLetter = n4.substring(0,1);
+        String remainder3   = n4.substring(1);
+
+        String fifthLetter = n5.substring(0,1);
+        String remainder4   = n5.substring(1);
+
+
+        String sixthLetter = n6.substring(0,1);
+        String remainder5   = n6.substring(1);
+
+
+        String seventhLetter = n7.substring(0,1);
+        String remainder6   = n7.substring(1);
+
+
+        String eigthLetter = n8.substring(0,1);
+        String remainder7   = n8.substring(1);
+
+
+        String ninethLetter = n9.substring(0,1);
+        String remainder8   = n9.substring(1);
+
+
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        String capitalized3 = fourthLetter.toUpperCase() + remainder3.toLowerCase();
+
+
+        String capitalized4 = fifthLetter.toUpperCase() + remainder4.toLowerCase();
+
+        String capitalized5 = sixthLetter.toUpperCase() + remainder5.toLowerCase();
+
+
+        String capitalized6 = seventhLetter.toUpperCase() + remainder6.toLowerCase();
+
+
+        String capitalized7 = eigthLetter.toUpperCase() + remainder7.toLowerCase();
+
+
+        String capitalized8 = ninethLetter.toUpperCase() + remainder8.toLowerCase();
+
+
+
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2+" "+capitalized3+" "+capitalized4+" "+capitalized5+" "+capitalized6+" "+capitalized7+" "+capitalized8);
+
+
+       }
+    else if(n == 10)
+       {
+        String n1= sc.next();
+        String n2 = sc.next();
+        String n3 = sc.next();
+
+        String n4 = sc.next();
+
+        String n5 = sc.next();
+
+        String n6 = sc.next();
+
+        String n7 = sc.next();
+
+        String n8 = sc.next();
+
+        String n9 = sc.next();
+
+        String n10 = sc.next();
+
+
+        String firstLetter = n1.substring(0,1);
+        String remainder   = n1.substring(1);
+        String secLetter = n2.substring(0,1);
+        String remainder1   = n2.substring(1);
+        String thirdLetter = n3.substring(0,1);
+        String remainder2   = n3.substring(1);
+
+        String fourthLetter = n4.substring(0,1);
+        String remainder3   = n4.substring(1);
+
+        String fifthLetter = n5.substring(0,1);
+        String remainder4   = n5.substring(1);
+
+
+        String sixthLetter = n6.substring(0,1);
+        String remainder5   = n6.substring(1);
+
+
+        String seventhLetter = n7.substring(0,1);
+        String remainder6   = n7.substring(1);
+
+
+        String eigthLetter = n8.substring(0,1);
+        String remainder7   = n8.substring(1);
+
+
+        String ninethLetter = n9.substring(0,1);
+        String remainder8   = n9.substring(1);
+
+
+        String tenthLetter = n10.substring(0,1);
+        String remainder9   = n10.substring(1);
+
+        String capitalized = firstLetter.toUpperCase() + remainder.toLowerCase();
+
+        String capitalized1 = secLetter.toUpperCase() + remainder1.toLowerCase();
+
+        String capitalized2 = thirdLetter.toUpperCase() + remainder2.toLowerCase();
+
+        String capitalized3 = fourthLetter.toUpperCase() + remainder3.toLowerCase();
+
+
+        String capitalized4 = fifthLetter.toUpperCase() + remainder4.toLowerCase();
+
+        String capitalized5 = sixthLetter.toUpperCase() + remainder5.toLowerCase();
+
+
+        String capitalized6 = seventhLetter.toUpperCase() + remainder6.toLowerCase();
+
+
+        String capitalized7 = eigthLetter.toUpperCase() + remainder7.toLowerCase();
+
+
+        String capitalized8 = ninethLetter.toUpperCase() + remainder8.toLowerCase();
+
+
+        String capitalized9 = tenthLetter.toUpperCase() + remainder9.toLowerCase();
+
+
+
+
+
+        System.out.println("Result::"+capitalized+" "+capitalized1+" "+capitalized2+" "+capitalized3+" "+capitalized4+" "+capitalized5+" "+capitalized6+" "+capitalized7+" "+capitalized8+" "+capitalized9);
+
+
+
+       }
+ else{
+        System.out.println("wrong choice"+"\n");
+
+ }
+ }while(!quit);
+		}
+
+
+
+
+
+public static void main(String args[])
+{
+	stt h=new stt();
+	h.abc();
+}
+}
+
+
+
+

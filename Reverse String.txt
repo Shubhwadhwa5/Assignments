@@ -1,0 +1,41 @@
+Ques : Reverse String?
+
+
+package prac;
+
+
+//	package practise;
+
+	import java.util.Scanner;
+	/**
+	 *
+	 * @author shorya
+	 */
+	public class reverse {
+
+	    Scanner sc=new Scanner(System.in);
+	    int n,i,size;
+	    String rev=" ";
+	    String strg=new String();
+	    void reverse()
+	    {
+	    	System.out.println("Enter the String");
+	            strg=sc.nextLine();
+
+	            	 size=strg.length();
+
+	for(int i=(size-1);i>=0;i--){
+
+	rev+=strg.charAt(i);
+
+	}
+	System.out.println("Reverse String:-"+"\n"+rev);
+	    }
+	    public static void main(String args[])
+	    {
+	reverse rs=new reverse();
+	rs.reverse();
+	    }
+	}
+
+

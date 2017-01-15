@@ -1,0 +1,364 @@
+Ques: Details of an Employee?
+
+package practise;
+
+import java.util.Scanner;
+ class employee
+{
+	Scanner sc=new Scanner(System.in);
+	int empId;
+	String empName;
+	int total_leaves;
+	double totalsal;
+	float ra=50,f=12;
+	double deduct, basic;
+	double hra,pf;
+	int sick,cas,avail,nol=2;
+	static int bal_of_leaves;
+        int choice;
+
+
+
+
+	 void calculate_balance_leaves()
+	{
+		System.out.println("Employee");
+                System.out.println("Enter the salary");
+                totalsal=sc.nextInt();
+
+		System.out.println("Number of days");
+		int days=sc.nextInt();
+		if(bal_of_leaves==0)
+		{
+		//	deduct= (totalsal / days);
+		//deduct=deduct*bal_of_leaves;
+
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+		}
+
+		else if(bal_of_leaves<0)
+		{
+			deduct= (totalsal / days);
+		deduct=deduct*bal_of_leaves;
+
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+
+		}	else if(bal_of_leaves>=1)
+			{
+		//		deduct= (totalsal / days);
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+
+			}
+		System.out.println("Balance leaves::"+bal_of_leaves);
+		//return false;
+
+		}
+
+
+
+
+	 boolean avail_leave(int no_of_leaves, char type_of_leave){
+		System.out.println("Employee");
+
+		System.out.println("Enter Sick leave taken");
+		sick=sc.nextInt();
+		System.out.println("Enter casual leave taken");
+		cas=sc.nextInt();
+
+System.out.println("Paid Leave given="+no_of_leaves);
+System.out.println("Paid Leave taken="+no_of_leaves);
+
+int no=no_of_leaves+cas+sick;
+
+		System.out.println("Number of leaves taken="+no);
+		System.out.println("Enter Type of leave" );
+		type_of_leave=sc.next().charAt(0);
+		avail=no_of_leaves;
+
+		System.out.println("Total number of Avail Leaves="+avail);
+		
+                bal_of_leaves=no_of_leaves-no;
+		System.out.println("Balance leaves:"+bal_of_leaves);
+
+                if(bal_of_leaves>=0)
+		{
+
+System.out.println("True");
+			calculate_balance_leaves();
+			return true;
+		}
+                if(bal_of_leaves<=0){
+
+System.out.println("false");
+			calculate_balance_leaves();
+
+                }
+		
+			return true;
+
+	}
+	void calculate_salary()
+	{
+		System.out.println("Employee");
+
+		System.out.println("Salary"+totalsal);
+//		totalsal=sc.nextInt();
+		hra=(totalsal / ra);
+		pf=(totalsal / f);
+                System.out.println("pf deduction"+pf);
+
+System.out.println("Total deduction"+(pf-deduct));
+
+                System.out.println("Hra addition="+hra);
+					 totalsal = totalsal + hra - pf + deduct;
+			System.out.println("Salary after deduction of pf /hra "+totalsal);
+
+	}}
+
+
+	public class PermanentEmp extends employee
+	{
+		int paid_leave=4, sick_leave, casual_leave;
+
+
+
+		void print_leave_details()
+		{
+                    System.out.println("\n");
+			System.out.println("Permanent Employee");
+
+                    System.out.println("Enter Sick leave");
+			sick_leave=sc.nextInt();
+
+			System.out.println("Enter Casual leave");
+			casual_leave=sc.nextInt();
+                        System.out.println(" Paid leave="+4);
+
+		total_leaves=paid_leave+ sick_leave+ casual_leave;
+		System.out.println("Total Leaves="+total_leaves);
+
+		}
+		//override
+		void calculate_balance_leaves()
+		{
+			System.out.println("Permanent Employee");
+       System.out.println("Enter the salary");
+                totalsal=sc.nextInt();
+
+			System.out.println("Enter number of days");
+			int days=sc.nextInt();
+		if(bal_of_leaves==0)
+		{
+		//	deduct= (totalsal / days);
+		//deduct=deduct*bal_of_leaves;
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+
+		}
+
+		else if(bal_of_leaves<0)
+		{
+			deduct= (totalsal / days);
+		deduct=deduct*bal_of_leaves;
+
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+		}	else if(bal_of_leaves>=1)
+			{
+		//		deduct= (totalsal / days);
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+
+			}
+
+                bal_of_leaves=paid_leave-total_leaves;
+		
+			System.out.println("Balance leaves"+bal_of_leaves);
+			//return false;
+
+			}
+
+
+		//override
+		boolean avail_leave(int no_of_leaves, char type_of_leave)
+		{	System.out.println("Permanent Employee");
+
+			System.out.println("Sick leave taken="+sick_leave);
+		//sick=sc.nextInt();
+
+		System.out.println("Casual leave taken="+casual_leave);
+		avail=sick+cas+no_of_leaves;
+
+
+System.out.println("Paid Leave given="+no_of_leaves);
+
+System.out.println("Paid Leave taken="+no_of_leaves);
+                System.out.println("Number of leaves taken="+total_leaves);
+
+		System.out.println("Total number of Avail Leaves="+avail);
+
+                bal_of_leaves=paid_leave-total_leaves;
+		System.out.println("Balance leaves"+bal_of_leaves);
+
+                if(bal_of_leaves>=0)
+		{
+
+System.out.println("True");
+			calculate_balance_leaves();
+			return true;
+		}
+                if(bal_of_leaves<=0){
+
+System.out.println("false");
+			calculate_balance_leaves();
+
+                }
+		 avail=no_of_leaves;
+
+			return true;
+
+		}
+
+
+		//override
+		void calculate_salary(){
+			System.out.println("Permanent Employee");
+
+			System.out.println("salary"+totalsal);
+		// basic=sc.nextInt();
+
+		hra=(totalsal / ra);
+		pf=(totalsal / f);
+                System.out.println("pf deduction"+pf);
+
+System.out.println("Total deduction"+(pf-deduct));
+
+                System.out.println("Hra addition="+hra);
+totalsal = totalsal + hra - pf + deduct;
+System.out.println("Salary after deduction of pf /hra "+totalsal);
+		}
+	}
+
+	class TemporaryEmp extends employee{
+int nol2=2;
+		//override
+		void calculate_balance_leaves(){
+
+              System.out.println("Temporary Employee");
+System.out.println("Enter the salary");
+totalsal=sc.nextInt();
+			System.out.println("enter number of days");
+			int days=sc.nextInt();
+		if(bal_of_leaves==0)
+		{
+		//	deduct= (totalsal / days);
+		//deduct=deduct*bal_of_leaves;
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+
+		}
+
+		else if(bal_of_leaves<0)
+		{
+			deduct= (totalsal / days);
+		deduct=deduct*bal_of_leaves;
+
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+
+		}	else if(bal_of_leaves>=1)
+			{
+		//		deduct= (totalsal / days);
+                        System.out.println("Salary Deduction from Balance leaves"+deduct);
+			}
+		        bal_of_leaves=avail-nol2;
+
+			System.out.println("Balance leaves="+bal_of_leaves);
+			//return false;
+
+			}
+		//override
+	boolean avail_leave(int no_of_leaves, char type_of_leave)
+		{
+                  System.out.println("\n");
+
+		System.out.println("Temporary Employee");
+
+			System.out.println("Enter Sick leave taken");
+			sick=sc.nextInt();
+
+			System.out.println("Enter casual leave taken");
+			cas=sc.nextInt();
+                        System.out.println("Paid Leaves given="+no_of_leaves);
+			System.out.println("Paid Leaves taken="+no_of_leaves);
+
+                        nol2=no_of_leaves+sick+cas;
+                        System.out.println("Number of leaves taken="+nol2 );
+		
+		avail=no_of_leaves;
+
+		System.out.println("Total number of Avail Leaves="+avail);
+		
+                        bal_of_leaves=avail-nol2;
+		System.out.println("Balance leaves"+bal_of_leaves);
+	
+                        if(bal_of_leaves>=0)
+			{
+System.out.println("True");
+                            calculate_balance_leaves();
+				return true;
+			}
+                if(bal_of_leaves<=0){
+
+System.out.println("false");
+			calculate_balance_leaves();
+
+                }
+
+		return true;
+				}
+
+
+	//override
+	 void calculate_salary()
+		{
+		 System.out.println("Temporary Employee");
+
+			double sal;
+			System.out.println("salary"+totalsal);
+
+		hra=(totalsal / ra);
+		pf=(totalsal / f);
+                System.out.println("pf deduction"+pf);
+
+System.out.println("Total deduction"+(pf-deduct));
+
+                System.out.println("Hra addition="+hra);
+totalsal= (totalsal + hra - pf + deduct);
+System.out.println("Salary after deduction or addition of pf /hra "+totalsal);
+		}
+
+
+
+
+
+
+public static void main(String args[])
+{
+	employee e=new employee();
+	e.avail_leave(3,'0');
+
+	//e.calculate_balance_leaves();
+	e.calculate_salary();
+
+	PermanentEmp pe=new PermanentEmp();
+	pe.print_leave_details();
+	pe.avail_leave(4,'0');
+	//pe.calculate_balance_leaves();
+
+        pe.calculate_salary();
+
+	TemporaryEmp tep=new TemporaryEmp();
+tep.avail_leave(2,'0');
+//tep.calculate_balance_leaves();
+
+tep.calculate_salary();
+
+}
+
+}

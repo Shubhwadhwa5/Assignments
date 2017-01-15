@@ -1,0 +1,59 @@
+Ques: Exception handling divison by zero or checking age        concept? 
+
+package practise;
+import java.lang.Exception;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+public class exceptionhandle
+{
+    Scanner sc=new Scanner(System.in);
+int num,num1;
+void abc()
+    {
+    try{
+    System.out.println("Enter the num");
+    num=sc.nextInt();
+    System.out.println("Enter the num1");
+    num1=sc.nextInt();
+    int result=num/num1;
+    System.out.println("Result="+result);
+
+    }
+    catch(NumberFormatException e)
+    {
+     System.out.println("Number Error");
+    }
+    catch(ArithmeticException e1)
+    {
+
+     System.out.println("Arithmetic Error");
+    }
+
+    catch(Exception e2)
+    {
+
+     System.out.println(" Error");
+    }
+
+}
+void throwe()
+    {
+    int age;
+    System.out.println("Enter your Age");
+    age=sc.nextInt();
+    if(age<18)
+    {
+        throw new InputMismatchException("age is invalid");
+    }
+ else{
+        System.out.println("Age="+age);
+ }
+}
+public static void main(String args[])
+    {
+    exceptionhandle eh=new exceptionhandle();
+    //eh.abc();
+   eh.abc();
+    eh.throwe();
+}
+}

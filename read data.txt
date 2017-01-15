@@ -1,0 +1,60 @@
+Ques: Read and Write data from the file.
+package prac;
+
+//package demoprac;
+
+import java.io.*;
+import java.util.Scanner;
+public class file {
+	String str;
+	Scanner sc=new Scanner(System.in);
+    
+	void abc()
+	{
+        try{
+        FileOutputStream f=new FileOutputStream("C:/practise/demo3.txt");
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the data");
+    str=sc.nextLine();
+    byte[] b=str.getBytes();
+    f.write(b);
+    f.close();
+    System.out.println("Success");
+    
+                }
+    catch(Exception e)
+        {
+    	System.out.println(e);
+    	}
+    
+	}
+	void bca()
+	{
+		String s;
+		try{
+			System.out.println("Get data from demo text file");
+			
+			FileInputStream i=new FileInputStream("C:/practise/demo3.txt");
+			
+			i.read();
+			i.close();
+
+	        FileOutputStream f=new FileOutputStream("C:/practise/demo1.txt");
+	        byte[] b=str.getBytes();
+	        f.write(b);
+	        f.close();
+	      	//f.write(b);
+		}catch (Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+    public static void main(String args[])
+    {
+    	file f=new file();
+    	
+    	f.abc();
+    f.bca();
+            }
+}
+

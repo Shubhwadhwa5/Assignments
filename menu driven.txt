@@ -1,0 +1,182 @@
+Ques: Menu driven Program?
+
+package practise;
+
+
+import java.util.Scanner;
+public class menudriven {
+
+boolean quit=false;
+    Scanner sc=new Scanner(System.in);
+    int f,n,i,r,c,rev,x,fibo,n2=1,n1=0,choice;
+
+void check()
+	{
+do{
+System.out.println("Select Your Operation");
+
+		System.out.println("1.Factorial\n"+"2.Prime Number\n"+"3.Fibonacci Series\n"+"4.Palindrome\n"+"5.Armstrong\n"+"6.Reverse String\n"+"7.Exit");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your choice");
+	    choice=sc.nextInt();
+
+switch(choice)
+	{
+	case 1:
+		fact();
+		break;
+	case 2:prime();break;
+case 3:fibo();break;
+      case 4:palindrome();break;
+    case 5: arms();break;
+    case 6:revstring();break;
+    case 7:
+        quit = true;
+                        break;
+default:
+                        System.out.println("Wrong choice.");
+
+                        break;
+
+    }
+
+System.out.println("\n");
+ System.out.println("Do u want to perform more Operation..."+"\n(1 for yes)"+"\n(0 for no)");
+choice=sc.nextInt();
+if(choice==1)
+{
+check();
+	}
+ else if(choice==0)
+{
+     break;
+
+ }
+ else{
+    System.out.println("Wrong choice");
+check();
+ }
+
+
+ }while(!quit);
+		}
+
+
+    void fact()
+    {
+    	System.out.println("Enter the number");
+    	n=sc.nextInt();
+    	f=1;
+        for(i=n;i>=1;i--)
+        {
+         f=f*i;
+
+        }         System.out.println(f);
+
+
+    }
+	void prime()
+	{
+
+	System.out.println("Enter the number");
+    		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		 for (i = 1; i <= n; i++) {
+	          if (n % i == 0) {
+	             c++;
+	          }
+		 }
+
+	    if (c==2)
+	    {
+	    	System.out.println("The given number is Prime Number");
+
+	    }else
+	    {
+	    	System.out.println("The given number is Not a Prime Number");
+	    }
+	}
+	void fibo()
+	{
+            System.out.println("\nEnter the size");
+    	n=sc.nextInt();
+		System.out.println(n1);
+		System.out.println(n2);
+		for(i=1;i<=n;i++)
+		{
+		int fibo=n1+n2;
+		n1=n2;
+		n2=fibo;
+		System.out.println(fibo);
+	}}
+	void palindrome()
+	{
+               System.out.println("Enter the number");
+
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		rev=0;
+		x=n;
+		while(n!=0)
+		{
+			 r=n%10;
+			rev=(rev*10)+r;
+			n=n/10;
+
+		}System.out.println(rev);
+		 if(rev==x)
+		 {
+			 System.out.println("The given number is Palindrome");
+		 }
+		 else{
+			 System.out.println("The given number is Not Palindrome");
+
+		 }
+	}
+	void arms()
+	{
+System.out.println("Enter the number");
+
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		int sum=0;
+		x=n;
+		while(n!=0)
+		{
+			 r=n%10;
+			sum=sum+(r*r*r);
+			n=n/10;
+
+		}//System.out.println(sum);
+		 if(sum==x)
+		 {
+			 System.out.println("The given number is ArmsStrong");
+		 }
+		 else{
+			 System.out.println("The given number is Not ArmsStrong");
+
+		 }
+	}
+	void revstring()
+	{
+		String n,rev="";
+
+		System.out.println("Enter the STRING::");
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextLine();
+	  int l=n.length();
+	  // int length = 0;
+	for(i=l-1;i>=0;i--)
+			{
+            rev=rev+n.charAt(i);
+		}System.out.println(rev);
+        }
+
+public static void main(String args[])
+{
+    menudriven f=new menudriven();
+  f.check();
+  }
+}
+
+

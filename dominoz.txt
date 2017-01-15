@@ -1,0 +1,276 @@
+package practise;
+
+import java.util.Scanner;
+
+public class choice
+{
+    String start,p,b,f;
+	int i,choice,choice1,choice2,choice3,totall;
+        int sf=20,mf=30,lf=40,vb=40,nvb=60,lp=120,sp=60,mp=90;
+boolean quit=false;
+
+void choose()
+    {
+
+    do{
+	System.out.println("Welcome to the Dominoz");
+    Scanner sc=new Scanner(System.in);
+System.out.println("Press 1 to Enter");
+        System.out.println("Press 0 to Exit");
+    System.out.println("Enter your choice");
+	    choice=sc.nextInt();
+if(choice==1)
+{
+check();
+	}
+ else if(choice==0)
+{
+     break;
+
+ }
+ else{
+    System.out.println("Wrong choice");
+choose();
+            }
+        } while (!quit);
+
+}
+void check()
+	{
+do{
+   
+		System.out.println("1.Pizza"+"2.Burger"+"3.French Fries"+"4.Exit");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your choice");
+	    choice=sc.nextInt();
+
+switch(choice)
+	{
+	case 1:
+		pizza();
+		break;
+	case 2:burger();break;
+case 3:fries();break;
+      case 4://exit
+                        quit=true;
+                        break;
+default:
+                        System.out.println("Wrong choice.");
+  
+                        break;
+
+    }
+
+System.out.println("\n");
+ System.out.println("Do u want to order more..."+"\n(1 for yes)"+"\n(0 for no)");
+choice=sc.nextInt();
+if(choice==1)
+{
+check();
+	}
+ else if(choice==0)
+{
+     break;
+
+ }
+ else{
+    System.out.println("Wrong choice");
+check();
+ }
+ 
+      
+ }while(!quit);
+		}
+
+
+
+	void pizza()
+                {
+			System.out.println("\n1.Large" + "\n2.medium" + "\n3.small"+ "\n4.medium and large(combo)"+"\n5.medium and small"+"\n6.large ,small and medium(combo 3)");
+			Scanner sc=new Scanner(System.in);
+			choice=sc.nextInt();
+			switch(choice)
+			{
+			case 1:
+				lp();
+				break;
+			case 2:mp();break;
+		case 3:
+			sp();
+		break;
+		case 4:
+			mplp();
+			break;
+		case 5:
+			mpsp();
+                            case 6:mplpsp();
+                            break;
+                        }}
+
+
+void lp()
+{
+		System.out.println("Get ur large pizza in 20-min");
+System.out.println("your bill is:"+"Rs"+lp);
+}
+  void mp()
+
+
+                {	System.out.println("Get ur Medium pizza in 15-min");
+            System.out.println("your bill is:"+"Rs"+mp);
+
+                }
+  void sp()
+
+{System.out.println("Get ur small pizza in 10-min");
+                 System.out.println("your bill is:"+"Rs"+sp);
+
+}
+        void mplp()
+        {
+
+            totall=mp+lp;
+     System.out.println("Get ur combo pack  in 20-min");
+            System.out.println("Your bill is="+totall);
+
+        }
+
+                   void lpsp()
+                { totall=lp+sp;
+                  System.out.println("Get ur combo pack in 20-min");
+                    System.out.println("your bill is:"+"Rs"+totall);
+                }
+
+  void mpsp()   {
+     totall=mp+sp;
+     System.out.println("Get ur combo pack in 10 min");
+     System.out.println("your bill is:"+"Rs"+totall);
+  }
+
+  void mplpsp()   {
+     totall=mp+sp+lp;
+                  System.out.println("Get ur combo pack in 20-min");
+     System.out.println("your bill is:"+"Rs"+totall);
+  }
+
+
+
+	 void burger()
+     {
+
+                                System.out.println("1.Veg Burger" + "\n2.Non-Veg Burger"+"\n3.Veg and Non_veg Burger");
+                        Scanner sc=new Scanner(System.in);
+		choice=sc.nextInt();
+                switch(choice)
+                {
+                    case 1: vb();
+                    break;
+                    case 2:
+                        nvb();
+                    break;
+                    case 3:vbnvb();
+                    break;
+         }
+    }
+		void vb()
+	{
+		System.out.println("Get ur Veg burger in 10 min");
+                    System.out.println("your bill is:"+"Rs"+vb);
+         }
+void nvb()
+                {
+                    System.out.println("Get ur Non-Veg burger in 10 min");
+                System.out.println("your bill is:"+"Rs"+nvb);
+         }
+
+ void vbnvb()
+                {
+      totall=vb+nvb;
+      System.out.println("Get ur combo pack in 10 min");
+     System.out.println("your bill is:"+"Rs"+totall);
+
+ }
+
+ 
+
+        void fries()
+                {
+		System.out.println("\n1.Large" + "\n2.medium" + "\n3.small"+ "\n4.medium and large(combo)"+"\n5.medium and small"+"\n6.large ,small and medium(combo 3)");
+
+    		Scanner sc=new Scanner(System.in);
+                    choice=sc.nextInt();
+    	switch(choice)
+			{
+			case 1:
+				lf();
+				break;
+			case 2:mf();break;
+		case 3:
+			sf();
+		break;
+		case 4:
+			lfmf();
+			break;
+		case 5:
+			mfsf();
+                            case 6:lfmfsf();
+                            break;
+                        }
+        }
+		void lf()
+		{
+
+			System.out.println("Get ur large french fries pack in 20-min");
+
+                    System.out.println("your bill is:"+"Rs"+lf);
+    }
+     void mf()
+                {
+                    System.out.println("Get ur medium french fries pack in 15-min");
+                    System.out.println("your bill is:"+"Rs"+mf);
+    }
+                    void sf()
+                {    System.out.println("Get ur small french fries pack in 10-min");
+                    System.out.println("your bill is:"+"Rs"+sf);
+    }
+           void lfmf()
+
+                {totall=lf+mf;
+                 System.out.println("Get ur combo pack in 10 min");
+                    System.out.println("your bill is:"+"Rs"+totall);
+    }
+  void lfsf()
+                {
+     totall=lf+sf;
+     System.out.println("Get ur combo pack in 10 min");
+                   System.out.println("your bill is:"+"Rs"+totall);
+
+    }
+                 void mfsf()
+                {
+     totall=mf+sf;
+     System.out.println("Get ur combo pack in 10 min");
+                   System.out.println("your bill is:"+"Rs"+totall);
+                    }
+
+void lfmfsf()
+    {
+    totall=lf+mf+sf;
+    System.out.println("Get ur combo pack in 10 min");
+        System.out.println("your bill is:"+"Rs"+totall);
+}
+
+                
+
+public static void main ( String args[] )
+{
+
+	choice c=new choice();
+	choice cp=new choice();
+	choice cb=new choice();
+	choice cf=new choice();
+	c.choose();
+        }
+}
+
+

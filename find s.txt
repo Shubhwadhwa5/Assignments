@@ -1,0 +1,34 @@
+Ques: Calculate String length and Find s and its index       number in the given string? 
+
+package prac;
+
+import java.io.*;
+public class strng {
+	
+	
+	public static void main(String args[]) throws IOException
+	
+	{	
+		String name;
+		int v= 0;
+		int a=0;
+		char ch = 0;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in) );
+
+		System.out.println("Enter a new String : ");
+		name = br.readLine();
+	for(int i = 0; i < name.length(); i ++)
+	{
+		 a=name.length();
+		ch = name.charAt(i);
+		if(ch == 's'|| ch == 'S')
+		{
+			v=v+1;
+		System.out.println("Index Number= "+(i+1));
+		}	
+	}
+	System.out.println("Total (s) in String  : " + v);
+	System.out.println("Full Length of String  : " + a);
+
+	}	
+}

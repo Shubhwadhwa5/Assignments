@@ -1,0 +1,188 @@
+Ques: Addition Subtarction Multiplication or divsion matrix?
+
+package practise;
+import java.util.Scanner;
+public class arr {
+
+	Scanner sc=new Scanner(System.in);
+int [][]num;
+int num1[][];
+
+int i,j,row,cols;
+	String s;
+        boolean quit=false;
+void check()
+	{
+do{
+
+		System.out.println("1.Addition"+" "+"2.Subtraction"+" "+"3.Multiplication"+" "+"4.Division"+" "+"5.Modules"+" "+"6.Exit");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your choice");
+	    int choice=sc.nextInt();
+
+switch(choice)
+	{
+	case 1:
+		add();
+		break;
+	case 2:subt();break;
+case 3:mul();break;
+    case 4:div();break;
+    case 5:mod();break;
+    case 6://exit
+                        quit=true;
+                        break;
+default:
+                        System.out.println("Wrong choice.");
+
+                        break;
+
+    }
+
+System.out.println("\n");
+ System.out.println("Do u want to Perform more operation..."+"\n(1 for yes)"+"\n(0 for no)");
+choice=sc.nextInt();
+if(choice==1)
+{
+check();
+	}
+ else if(choice==0)
+{
+     break;
+
+ }
+ else{
+    System.out.println("Wrong choice");
+check();
+ }
+
+
+ }while(!quit);
+		}
+
+
+
+	void size()
+    {
+            
+    System.out.println("Enter the size of Row");
+     row=sc.nextInt();
+ System.out.println("Enter the size of Cols");
+     cols=sc.nextInt();
+        }
+        void num()
+	{
+		System.out.println("Enter the num");
+		num=new int[row][cols];
+		for(i=0;i<row;i++)
+		{
+                 
+for(j=0;j<cols;j++)
+{
+			num[i][j]=sc.nextInt();
+		}}}
+        void num1()
+	{
+		System.out.println("Enter the num1");
+		num1=new int[row][cols];
+		for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+			num1[i][j]=sc.nextInt();
+		}}}
+
+        void display()
+    {
+        System.out.println("Num:");
+            for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+	System.out.print(num[i][j]+" ");
+                    }
+            System.out.println();}
+        System.out.println("Num1:");
+            for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+	System.out.print(num1[i][j]+" ");
+                    }
+            System.out.println();}
+        }
+        void add()
+    {
+            System.out.println("Addition Matrix");
+            for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+	System.out.print(num[i][j]+num1[i][j]+" ");
+                    }
+            System.out.println();}
+        }
+        void subt()
+    {
+            System.out.println("Subtraction Matrix");
+            for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+	System.out.print(num[i][j]-num1[i][j]+" ");
+                    }
+            System.out.println();}
+        }
+        void div()
+    {
+            System.out.println("Division Matrix");
+            for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+	System.out.print(num[i][j]/num1[i][j]+" ");
+                    }
+            System.out.println();}
+        }
+        void mul()
+    {
+            System.out.println("Multiplication Matrix");
+            for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+	System.out.print(num[i][j]*num1[i][j]+" ");
+                    }
+            System.out.println();}
+        }
+         void mod()
+    {
+            System.out.println("Modules Matrix");
+            for(i=0;i<row;i++)
+		{
+
+for(j=0;j<cols;j++)
+{
+	System.out.print(num[i][j]%num1[i][j]+" ");
+                    }
+            System.out.println();}
+        }
+public static void main(String args[])
+    {
+    arr a=new arr();
+
+    a.size();
+a.num();
+a.num1();
+a.display();
+a.check();
+
+}
+}
