@@ -1,0 +1,128 @@
+Ques: Fixed Stack array list?
+
+package practise;
+
+/**
+ *
+ * @author shorya
+ */
+//package prac;
+
+import java.util.Scanner;
+interface stack{
+	public void push(int i);
+	public int pop();
+
+}
+
+public class fixedstack implements stack
+{
+	Scanner sc=new Scanner(System.in);
+	 int f;
+	int arr[]=new int[5];
+	
+	fixedstack()
+	{
+            System.out.println("Defined Array size is 5");
+            System.out.println("We cannot change the size of array if do so give stack overflow Error");
+
+System.out.println("Enter the size of N");
+f=sc.nextInt();
+	}
+	public void push(int i) {
+		try{
+		System.out.println("Enter the values");
+		for(i=0;i<f;i++){
+arr[i]=sc.nextInt();
+
+		}
+  System.out.println("Fixed Array Values:");
+
+                for(i=0;i<f;i++){
+                System.out.println(arr[i]);
+
+                }
+                } catch (Exception e)
+		{
+			System.out.println("Stack overflow");
+
+		}
+
+
+
+	}
+
+	public int pop() {
+
+
+		return 0;
+	}}
+	class variablestack implements stack
+	{
+
+		 int n;
+                 Scanner sc=new Scanner(System.in);
+
+
+
+		variablestack()
+		{
+
+int arrv[]=new int[5];
+                System.out.println("Defined Array size is 5");
+
+            System.out.println("We can change the size of array as required");
+                }
+
+public void push(int i) {
+
+
+                    try{
+
+    System.out.println("Enter the size of an array at runtime");
+    n=sc.nextInt();;
+int arrv[]=new int[n];
+             System.out.println("Enter the values");
+                for(i=0;i<n;i++){
+
+
+                    arrv[i]=sc.nextInt();}
+
+
+  System.out.println("Variable Stack Array Values:");
+
+                for(i=0;i<n;i++){
+                System.out.println(arrv[i]);
+
+                            }
+
+				}catch(Exception e)
+				{
+					System.out.println("Stack overflow");
+
+				}
+
+		}
+
+		public int pop() {
+
+			return 0;
+		}
+
+
+
+	public static void main(String args[])
+	{
+
+		Scanner sc=new Scanner(System.in);
+
+		fixedstack fs=new fixedstack();
+
+fs.push(0);
+variablestack vs=new variablestack();
+vs.push(0);
+//fs.pop();
+	}
+
+}
+

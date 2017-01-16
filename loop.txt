@@ -1,0 +1,219 @@
+Ques: Looping concept?
+
+package practise;
+
+import java.util.Scanner;
+
+public class loop
+{
+int choice;
+boolean quit=false;
+	int rc=1;
+	Scanner sc=new Scanner(System.in);
+void check()
+	{
+do{
+
+		System.out.println("1.Loop 1\n"+"2.Loop 2\n"+"3.Loop 3\n"+"4.Loop 4\n"+"5.Loop 5\n"+"6.Loop 6\n"+"7.Exit");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your choice");
+	    choice=sc.nextInt();
+
+switch(choice)
+	{
+	case 1:
+		loop1();
+		break;
+	case 2:loop2();break;
+case 3:loop3();break;
+
+    case 4:loop4();
+    break;
+    case 5:loop5();break;
+    case 6:loop6();break;
+    case 7://exit
+                        quit=true;
+                        break;
+default:
+                        System.out.println("Wrong choice.");
+
+                        break;
+
+    }
+
+System.out.println("\n");
+ System.out.println("Do u want to perform more Looping Operation..."+"\n(1 for yes)"+"\n(0 for no)");
+choice=sc.nextInt();
+if(choice==1)
+{
+check();
+	}
+ else if(choice==0)
+{
+     break;
+
+ }
+ else{
+    System.out.println("Wrong choice");
+check();
+ }
+
+
+ }while(!quit);
+		}
+
+
+
+        void loop1()
+	{
+		System.out.println("How Many Rows You Want In Your Pyramid?");
+		int nr = sc.nextInt();
+		System.out.println("Here is\n");
+		for (int i = nr; i > 0; i--)
+		{
+
+
+			for (int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+
+
+			for (int j = 1; j <= rc; j++)
+			{
+				System.out.print("*"+" ");
+			}
+
+			System.out.println();
+			rc++;
+		    }
+
+		}
+void loop2()
+{
+	System.out.println("How Many Rows You Want In Your Pyramid?");
+	int nr = sc.nextInt();
+	System.out.println("Here is\n");
+	for (int i = 1; i < nr; i++)
+	{
+        	for (int j = 1; j <= i; j++)
+		{
+			System.out.print(j);
+			}
+    System.out.println();
+
+	}
+}
+void loop3()
+    {
+	System.out.println("How Many Rows You Want In Your Pyramid?");
+	int nr = sc.nextInt();
+	System.out.println("Here is\n");
+	for (int i = nr; i > 0; i--)
+	{
+                for (int j = 1; j <= rc; j++)
+		{
+			System.out.print(rc+"");
+            }
+                    System.out.println();
+
+		rc++;
+	}
+
+}
+void loop4()
+    {
+	System.out.println("How Many Rows You Want In Your Pyramid?");
+	int nr = sc.nextInt();
+	System.out.println("Here is\n");
+	for (int i = 1; i <= nr; i++)
+	{
+        //    System.out.println();
+		for (int j = 1; j <= i; j++)
+		{
+                    if(j==4 || j==6)
+                    {
+                        j++;
+                    }
+			System.out.print(j);
+			}
+
+            System.out.println();
+
+	}
+
+}
+void loop5()
+    {
+	System.out.println("How Many Rows You Want In Your Pyramid?");
+	int nr = sc.nextInt();
+	System.out.println("Here is\n");
+	for (int i = 1; i <=nr; i++)
+	{
+                for (int j = 1; j <=i; j++)
+		{
+
+			System.out.print(((i+j)%2)+"");
+            }
+
+                    System.out.println();		
+
+}}
+void loop6()
+    {
+    System.out.println("How Many Rows You Want In Your Pyramid?");
+	int nr = sc.nextInt();
+	System.out.println("Here is\n");
+
+    for(int i=1;i<=nr;i++)      
+{
+char c='a';
+for(int j=i;j<nr;j++)        
+{
+System.out.print(" ");
+}
+for(int k=1;k<=i;k++)      
+{
+System.out.print(c);
+++c;
+}
+c-=2;
+for(int l=1;l<i;l++)      
+{
+System.out.print(c);
+--c;
+}
+System.out.println();    
+
+}
+   for(int i=nr;i>=1;i--)        
+{
+char c='a';
+for(int j=nr;j>i;j--)        
+{
+System.out.print(" ");
+}
+for(int k=i;k>=1;k--)      
+{
+System.out.print(c);
+++c;
+}
+c-=2;
+for(int l=i;l>1;l--)     
+{
+System.out.print(c);
+--c;
+}
+System.out.println();    
+
+}
+}
+
+public static void main(String args[])
+{
+	loop l=new loop();
+	l.check();
+
+}
+}
+
