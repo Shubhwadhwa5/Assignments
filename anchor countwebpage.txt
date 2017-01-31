@@ -1,0 +1,33 @@
+
+	import java.util.List;
+
+	import org.openqa.selenium.By;
+		import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class anchorcount {
+	int count=0;
+
+		 public void acnt() throws InterruptedException
+		    {
+		        WebDriver dr=new FirefoxDriver();
+		        
+		        dr.get("file:///C:/Users/shorya/Desktop/html/pinky.html");
+				dr.manage().window().maximize();
+
+		        Thread.sleep(5000);
+		        List<WebElement> lista=dr.findElements(By.tagName("a"));
+		        System.out.println("No of Anchor Tags Available on WebPage: "+lista.size());
+		       dr.close();
+
+		    }
+	public static void main(String args[]) throws InterruptedException
+	{
+		anchorcount ac=new anchorcount();
+		ac.acnt();
+	}
+	}
+
+
+

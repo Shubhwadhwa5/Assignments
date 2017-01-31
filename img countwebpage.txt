@@ -1,0 +1,30 @@
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class imgcount
+{ int count=0;
+
+	 public void imgcnt() throws InterruptedException
+	    {
+	        WebDriver dr=new FirefoxDriver();
+	        dr.get("file:///C:/Users/shorya/Desktop/html/gallery.html");
+			dr.manage().window().maximize();
+
+	        Thread.sleep(5000);
+	        List<WebElement> listimg=dr.findElements(By.tagName("img"));
+	        System.out.println("No of Images available on WebPage: "+listimg.size());
+	        dr.close();
+
+	    }
+public static void main(String args[]) throws InterruptedException
+{
+	imgcount imgc=new imgcount();
+	imgc.imgcnt();
+}
+}
+

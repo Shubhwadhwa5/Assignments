@@ -1,0 +1,39 @@
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class fbdriver {
+
+			void run() throws InterruptedException
+			{
+				WebDriver dr=new FirefoxDriver();
+				dr.get("https://www.facebook.com/");
+				dr.manage().window().maximize();
+				dr.findElement(By.name("firstname")).sendKeys("Ritik");
+
+				dr.findElement(By.name("lastname")).sendKeys("Wadhwa");
+
+				dr.findElement(By.id("u_0_6")).sendKeys("9693264375");
+				dr.findElement(By.id("u_0_9")).sendKeys("9693264375");
+				dr.findElement(By.id("u_0_b")).sendKeys("12345abc@12");
+				dr.findElement(By.name("birthday_day")).sendKeys("14");
+
+				dr.findElement(By.name("birthday_month")).sendKeys("jan");
+				dr.findElement(By.name("birthday_year")).sendKeys("1996");
+				
+				dr.findElement(By.id("u_0_j")).click();
+				
+				dr.findElement(By.id("u_0_f")).click();
+			//dr.close();
+
+			System.out.println("Task Completed hun balle balle nacho nachoooooooooooooooooooooooooooooooooooo");
+	
+			}		public static void main(String args[]) throws InterruptedException
+			{
+			fbdriver d=new fbdriver();
+			d.run();
+			}
+		}
+
+
+
