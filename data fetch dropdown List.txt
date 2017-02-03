@@ -1,0 +1,36 @@
+	import java.util.List;
+
+	import org.openqa.selenium.By;
+		import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class selectdriver {
+
+
+
+		 public void selcnt() throws InterruptedException
+		    {
+		        WebDriver dr=new FirefoxDriver();
+		        dr.get("https://www.facebook.com/");
+				dr.manage().window().maximize();
+
+		        Thread.sleep(5000);
+		        List<WebElement> listsel=dr.findElements(By.tagName("select"));
+		        System.out.println("No of dropdown list available on WebPage: "+listsel.size());
+		        for(int i=0;i<listsel.size();i++)
+		        {
+		        System.out.println("No of elements available in dropdown list: "+listsel.get(i).getText());
+		        }dr.close();
+
+		    }
+	public static void main(String args[]) throws InterruptedException
+	{
+		selectdriver sel=new selectdriver();
+		sel.selcnt();
+	}
+	}
+
+
+

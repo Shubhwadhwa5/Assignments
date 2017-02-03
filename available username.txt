@@ -1,0 +1,44 @@
+	import java.util.List;
+
+	import org.openqa.selenium.By;
+		import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class textdriver {
+	int count=0;
+WebElement username,password;
+		 public void acnt() throws InterruptedException
+		    {
+		        WebDriver dr=new FirefoxDriver();
+		        
+		        dr.get("https://www.facebook.com/");
+				dr.manage().window().maximize();
+
+		        Thread.sleep(5000);
+		        List<WebElement> lista=dr.findElements(By.id("email"));
+		        System.out.println("No of Anchor Tags Available on WebPage: "+lista.size());
+		       
+		            if(username.isDisplayed())
+		            {
+		            	 System.out.println(" Available username on Web Page ");
+		  		               }
+		        
+		        else{
+		        	System.out.println("Not Available");
+			        	
+		        }
+		        dr.close();
+
+		    }
+	public static void main(String args[]) throws InterruptedException
+	{
+		textdriver ac=new textdriver();
+		ac.acnt();
+	}
+	}
+
+
+
+
+

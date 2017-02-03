@@ -1,0 +1,36 @@
+	import java.util.List;
+
+	import org.openqa.selenium.By;
+		import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class checkdriver {
+
+	int count=0;
+	WebElement radio;
+	public void acntt() throws InterruptedException
+		    {
+		        WebDriver dr=new FirefoxDriver();
+		        
+		        dr.get("https://www.facebook.com/");
+				dr.manage().window().maximize();
+		        Thread.sleep(5000);
+		        List<WebElement> lista=dr.findElements(By.xpath("//input[@type='radio']"));
+		        System.out.println("No of Radio buttons Available on WebPage: "+lista.size());
+		        dr.close();
+
+		    }
+	public static void main(String args[]) throws InterruptedException
+	{
+		checkdriver ac=new checkdriver();
+		ac.acntt();
+	}
+	}
+
+
+
+
+
+
+
